@@ -1,0 +1,82 @@
+* {
+    font-family: "M PLUS Rounded 1c", sans-serif;
+    padding: 0px;
+    margin: 0px;
+}
+
+body {
+    background-color: #f8f9fc;
+    margin: 10px;
+    padding: 10px;
+}
+
+.darkmode p {
+    color: #f8f9fc;
+}
+
+.darkmode {
+    background-color: #292929;
+}
+
+.darkmode h1 {
+    color: #f8f9fc;
+}
+
+.blackback{
+    width: 65px;
+    height: 58px;
+    position: absolute;
+    margin-top: 20px;
+    margin-right: 20px;
+    top: 0%;
+    right: 0%;
+    transform: translate(0%, 0%, 0%);
+}
+
+
+
+.flex-container {
+    margin-top: 50px;
+    display: flex;
+    flex-wrap: wrap;
+    height: 95vh;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.flex-container .card {
+    border-radius: 10px;
+    width: 100%;
+    padding: 20px;
+    margin: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.darkmode .flex-container .card {
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+}
+
+
+@media screen and (max-width: 1000px) {
+    h1 {
+        font-size: 30px;
+    }
+
+    .blackback{
+        position: absolute;
+        margin-right: 20px;
+        top: 0%;
+        right: 0%;
+        transform: translate(0%, 0%, 0%);
+        
+    }
+
+    .flex-container {
+        margin-top: 50px;
+        display: flex;
+        flex-wrap: wrap;
+        height: 95vh;
+        justify-content: center;
+        align-items: flex-start;
+    }
+}
