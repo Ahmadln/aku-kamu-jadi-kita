@@ -38,7 +38,7 @@ async function printMessage() {
     // Choose message based on the day
     switch (day) {
         case 'Sunday':
-            message = "Happy Sunday!";
+            message = "Happy Sunday! Hari ini kamuu istirahat ya cintaku. kalau kamu kepikiran apa² jngn di pendam sendiri yaa sayang, cerita ke aku yaa, jngn telat makan sayang, kamu biasanya kalau minggu males makan nih di rmh, jngn males makan yaa sayangkuu. I Love You ❤️🥰";
             break;
         case 'Monday':
             message = "Have a great start to the week!";
