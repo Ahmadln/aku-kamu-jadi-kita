@@ -56,7 +56,7 @@ async function printMessage() {
             message = "Happy Friday! Enjoy your day!";
             break;
         case 'Saturday':
-            message = "Happy Saturday Cintaku! Tunggu akuuu yacintaku kalau aku blm sampe dan di chat ga balas berarti aku msh dijalan untuk menjemput bidadariku";
+            message = "Happy Saturday Cintaku! Tunggu akuuu ya Cintaku kalau aku blm sampe dan di chat ga balas berarti aku msh dijalan untuk menjemput Bidadariku. I Love you Sarah Salsabila Putri ❤️";
             break;
         default:
             message = "Hello!";
