@@ -41,7 +41,7 @@ async function printMessage() {
             message = "Happy Sunday! Hari ini kamuu istirahat ya cintaku. kalau kamu kepikiran apa² jngn di pendam sendiri yaa sayang, cerita ke aku yaa, jngn telat makan sayang, kamu biasanya kalau minggu males makan nih di rmh, jngn males makan yaa sayangkuu. I Love You ❤️🥰";
             break;
         case 'Monday':
-            message = "Have a great start to the week!";
+            message = "Selamat Hari senin cinta, biasanya orang² kalau memulai hari senin bawaanya males, kamu semangatt yaa sayangku, sblm kerja pagi sarapan dulu yaa, trs siang harus banget makan, dan pass balik kerja kalau laper makan dulu sblm otw pulang yaa. Love you sayangku 😘🥰";
             break;
         case 'Tuesday':
             message = "Stay productive today!";
