@@ -14,7 +14,7 @@
 
 .wht {
     height: 50px;
-    margin-left: 100px;
+    margin-left: 50px;
 }
 
 #formattedDate {
@@ -100,7 +100,7 @@ body {
         padding: 0px;
         margin: 0px;
         color: #f8f9fc;
-        font-size: 12px;
+        font-size: 10px;
     }
 
     .blackback{
