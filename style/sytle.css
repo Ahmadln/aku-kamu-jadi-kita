@@ -15,6 +15,12 @@ body {
     color: #f8f9fc;
 }
 
+.gif-animasi{
+    text-align: center;
+    
+}
+
+
 .darkmode {
     background-color: #292929;
 }
@@ -39,10 +45,10 @@ body {
 .flex-container {
     margin-top: 50px;
     display: flex;
-    flex-wrap: wrap;
-    height: 95vh;
+/*     flex-wrap: wrap; */
+    height: auto;
     justify-content: center;
-    align-items: flex-start;
+/*     align-items: flex-start; */
 }
 
 .flex-container .card {
@@ -75,8 +81,8 @@ body {
     .flex-container {
         margin-top: 50px;
         display: flex;
-        flex-wrap: wrap;
-        height: 95vh;
+/*         flex-wrap: wrap; */
+        height: auto;
         justify-content: center;
         align-items: flex-start;
     }
