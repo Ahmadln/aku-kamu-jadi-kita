@@ -3,30 +3,48 @@
     text-align: justify;
     padding: 0px;
     margin: 0px;
-}
-
-body {
-    background-color: #f8f9fc;
-    margin: 10px;
-    padding: 10px;
-}
-
-.darkmode p {
     color: #f8f9fc;
 }
+.top_display{
+    display: flex;
+    align-items: center;
+    justify-content: center;  
 
-.gif-animasi{
-    text-align: center;
+}
+
+.wht {
+    height: 50px;
+    margin-left: 100px;
+}
+
+#formattedDate {
+    margin: 0;
     
 }
 
 
-.darkmode {
+body {
     background-color: #292929;
+    margin: 10px;
+    padding: 10px;
+}
+
+
+.darkmode p {
+    color: #292929;
+}
+
+.gif-animasi{
+    text-align: center;
+}
+
+
+.darkmode {
+    background-color: #f8f9fc;
 }
 
 .darkmode h1 {
-    color: #f8f9fc;
+    color: #292929 ;
 }
 
 .blackback{
@@ -42,8 +60,16 @@ body {
 
 
 
+.toggle_box{
+    position: fixed;
+    right: 0;
+    padding: 10px;
+    transform: translateY(-50%);
+    top: 80%;
+}
+
 .flex-container {
-    margin-top: 50px;
+    margin-top: 10px;
     display: flex;
 /*     flex-wrap: wrap; */
     height: auto;
@@ -56,15 +82,16 @@ body {
     width: 100%;
     padding: 20px;
     margin: 20px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
 }
 
 .darkmode .flex-container .card {
-    box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 }
+
 .gif{
-        width: 200px;
-    }
+    width: 250px;
+}
 
 @media screen and (max-width: 1000px) {
     h1 {
@@ -81,7 +108,7 @@ body {
     }
 
     .flex-container {
-        margin-top: 50px;
+        margin-top: 10px;
         display: flex;
 /*         flex-wrap: wrap; */
         height: auto;
@@ -89,6 +116,8 @@ body {
         align-items: flex-start;
     }
     .gif{
-        width: 50px;
+        width: 150px;
     }
+    
+
 }
