@@ -94,8 +94,13 @@ body {
 }
 
 @media screen and (max-width: 1000px) {
-    h1 {
-        font-size: 30px;
+    * {
+        font-family: "M PLUS Rounded 1c", sans-serif;
+        text-align: justify;
+        padding: 0px;
+        margin: 0px;
+        color: #f8f9fc;
+        font-size: 12px;
     }
 
     .blackback{
@@ -118,6 +123,7 @@ body {
     .gif{
         width: 150px;
     }
+    
     
 
 }
