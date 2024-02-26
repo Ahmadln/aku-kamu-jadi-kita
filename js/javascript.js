@@ -1,3 +1,4 @@
+import messages from "./txt/rhlQhcq.js";
 async function getType() {
     const days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
     const now = new Date();
@@ -30,33 +31,80 @@ function typewriter(message, paragraph_id) {
     writer();
 }
 
+function getCurrentTime() {
+    return new Date().getHours();
+}
+
+
 // Example usage:
 async function printMessage() {
     const day = await getType();
+    let currentTime = getCurrentTime();
     let message = '';
 
     // Choose message based on the day
     switch (day) {
         case 'Sunday':
-            message = "Happy Sunday! Hari ini kamuu istirahat ya cintaku. kalau kamu kepikiran apa² jngn di pendam sendiri yaa sayang, cerita ke aku yaa, jngn telat makan sayang, kamu biasanya kalau minggu males makan nih di rmh, jngn males makan yaa sayangkuu. I Love You ❤️🥰";
-            break;
+            if (currentTime < 12){
+                message = messages.Sunday.morning
+            } else if (currentTime <18 ){
+                message = messages.Sunday.afternoon
+            } else {
+                message = messages.Sunday.evening
+            }
         case 'Monday':
-            message = "Selamat Hari senin cinta, biasanya orang² kalau memulai hari senin bawaanya males, kamu semangatt yaa sayangku, sblm kerja pagi sarapan dulu yaa, trs siang harus banget makan, dan pass balik kerja kalau laper makan dulu sblm otw pulang yaa. Love you sayangku 😘🥰";
+            if (currentTime < 12){
+                message = messages.Monday.morning
+            } else if (currentTime <18 ){
+                message = messages.Monday.afternoon
+            } else {
+                message = messages.Monday.evening
+            }
             break;
         case 'Tuesday':
-            message = "Stay productive today!";
+            if (currentTime < 12){
+                message = messages.Thursday.morning
+            } else if (currentTime <18 ){
+                message = messages.Thursday.afternoon
+            } else {
+                message = messages.Thursday.evening
+            }
             break;
         case 'Wednesday':
-            message = "Halfway through the week!";
+            if (currentTime < 12){
+                message = messages.Wednesday.morning
+            } else if (currentTime <18 ){
+                message = messages.Wednesday.afternoon
+            } else {
+                message = messages.Wednesday.evening
+            }
             break;
         case 'Thursday':
-            message = "Keep pushing, weekend is almost here!";
+            if (currentTime < 12){
+                message = messages.Thursday.morning
+            } else if (currentTime <18 ){
+                message = messages.Thursday.afternoon
+            } else {
+                message = messages.Thursday.evening
+            }
             break;
         case 'Friday':
-            message = "Happy Friday! Enjoy your day!";
+            if (currentTime < 12){
+                message = messages.Friday.morning
+            } else if (currentTime <18 ){
+                message = messages.Friday.afternoon
+            } else {
+                message = messages.Friday.evening
+            }
             break;
         case 'Saturday':
-            message = "Happy Saturday Cintaku! Tunggu akuuu ya Cintaku kalau aku blm sampe dan di chat ga balas berarti aku msh dijalan untuk menjemput Bidadariku. I Love you Sarah Salsabila Putri ❤️";
+            if (currentTime < 12){
+                message = messages.Saturday.morning
+            } else if (currentTime <18 ){
+                message = messages.Saturday.afternoon
+            } else {
+                message = messages.Saturday.evening
+            }
             break;
         default:
             message = "Hello!";
@@ -65,6 +113,8 @@ async function printMessage() {
     typewriter(message, "main-card-text");
 }
 
+
+console.log("Create By Ahmad Maulana")
 printMessage();
 
 // In this code:
