@@ -14,6 +14,7 @@
                 <img src="./Img/cat-black.png" alt="DrakModeCat" id="catblack"  class="blackback" style="display:none" onclick="toggleDarkMode()">
             </div>
         </header>
+        
         <br/>
         <div class="top_display">
             <p id="formattedDate"></p>
@@ -49,11 +50,13 @@
                 
                 let isDark = document.body.classList.toggle("darkmode");
                 const myImage2 = document.getElementById("catblack");
-                
+                let star = document.getElementById("bintang");
                 if (isDark) {
                     myImage2.style.display = "block";
+                    star.style.display = "none";
                 } else {
                     myImage2.style.display = "none";
+                    star.style.display = "block";
                 }
             }
         </script>
@@ -91,6 +94,13 @@
             }             
             printgif();
         </script>
+
+        <div class="bg-animation" id="bintang">
+            <div id="stars"></div>
+            <div id="stars2"></div>
+            <div id="stars3"></div>
+            <div id="stars4"></div>
+        </div>
         
     </body>
 </html>
