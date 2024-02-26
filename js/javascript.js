@@ -63,11 +63,11 @@ async function printMessage() {
             break;
         case 'Tuesday':
             if (currentTime < 12){
-                message = messages.Thursday.morning
+                message = messages.Tuesday.morning
             } else if (currentTime <18 ){
-                message = messages.Thursday.afternoon
+                message = messages.Tuesday.afternoon
             } else {
-                message = messages.Thursday.evening
+                message = messages.Tuesday.evening
             }
             break;
         case 'Wednesday':
