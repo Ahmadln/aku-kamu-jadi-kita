@@ -50,6 +50,37 @@
                 }
             }
         </script>
+
+        <div class="gif-animasi">
+            <!-- <img src="./Img/kucincouple.gif" alt="Couple"> -->
+            <img id="catgif" src="" alt="Cat-gif" height="200px">
+        </div>
+
+        <script>
+            function getCurrentTime() {
+                return new Date().getHours();
+            }
+            var catgif = document.getElementById('catgif');
+            
+            async function printgif() {
+                let currentTime = getCurrentTime();
+                
+                if (currentTime < 12){
+                    catgif.src = './Img/kucincouple.gif';
+                } 
+                else if (currentTime < 18){
+                    catgif.src = './Img/neko-evening.gif';
+                } 
+                else{
+                    catgif.src = './Img/output-onlinegiftools.gif';
+
+                }
+            }
+            
+            printgif();
+            
+            
+        </script>
         
 
     </body>
