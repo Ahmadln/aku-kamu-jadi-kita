@@ -5,13 +5,15 @@
         <link rel="stylesheet" href="style\sytle.css">
         <link rel="stylesheet" href="style\animate.min.css">
         <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="icon" href="./Img/cat-white.png">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        
         
     </head>
     <body>
-
+       
         <header>
+            <img src="" alt="">
             <div class="toggle_box">                
                 <img src="./Img/cat-white.png" alt="DrakModeCat" id="whitecat"  class="blackback"  onclick="toggleDarkMode()">      
                 <img src="./Img/cat-black.png" alt="DrakModeCat" id="catblack"  class="blackback" style="display:none" onclick="toggleDarkMode()">
@@ -41,10 +43,10 @@
         <div class="menus">
             <button id="btnls" type="menu" class="button">Lokasi</button>
             <button id="btnmotivasi" type="menu" class="button">Motivasi</button>
+            <button id="btnlagu" type="menu" class="button">Lagu</button>
 
         </div>
         <br>
-
  
         <div class="accordion" id="box_lokasi">
             <div class="accordion-item">
@@ -96,11 +98,33 @@
                     <li>Wahai orang-orang yang beriman! Mohonlah pertolongan kepada Allah dengan sabar dan shalat. Sungguh, Allah (akan selalu) bersama orang-orang yang sabar,” – Q.S Al-Baqarah (2:153).</li>
                     <br><li>Jika kamu bersyukur, Aku akan tambahkan nikmat-Nya; dan jika kamu mengingkari, maka sesungguhnya azab-Ku sangat pedih." (Al-Quran, Surah Ibrahim, 14:7)</li>
                 </ul>
-                
+            </div>
+            
+            <div class="menu2" id="box_lagu">
+                <h4>Daftar lagu</h4><br>
+                <p onclick="toggle('lagu1')">Penjaga hati -Nadhif basalamah</p><br>
+                <p onclick="toggle('lagu2')">Hall Hebat -Govinda</p>
+            </div>
+            
+            
+            
+            
+            
+            <div id="musicPlayer1" >
+                <audio id="lagu1" class="lagu" controls>
+                    <source src="../aku-kamu-jadi-kita-main/music/nadhif basalamah - penjaga hati.mp3" type="audio/mp3">
+                    Your browser does not support the audio element.
+                </audio>
+            </div>
+            <div id="musicPlayer2" >
+                <audio id="lagu2" class="lagu" controls>
+                    <source src="../aku-kamu-jadi-kita-main/music/Govinda-Hal Hebat.mp3" type="audio/mp3">
+                    Your browser does not support the audio element.
+                </audio>
             </div><br>
         <div>
             <h4 class="textp">Hitung Mundur kita akan ketemu sayangku</h4>
-            <div id="countdown"></div>
+            <div id="countdown"></div><br><br><br>
         </div>
         <script src="./js/main.js"></script> 
 
