@@ -4,7 +4,76 @@
     padding: 0px;
     margin: 0px;
     color: #f8f9fc;
+    justify-content: center;
+    align-items: center;
 }
+
+.menus{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.button{
+    background-color: #007bff;
+    color: #fff;
+    border: 1px solid #007bff;
+    padding: 16px 32px;
+    margin-left: 5px;
+}
+.darkmode button{
+    color: white;
+}
+
+.button:hover {
+    background-color: #001d3b;
+    color: #fff;
+}
+
+.menu2{
+    width: auto;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+    border-radius: 20px;
+    padding: 20px;
+    text-align: justify;
+    display: none;
+    position: relative;
+}
+
+.darkmode .menu2{
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+
+#playPauseButton{
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 16px;
+    margin-right: 10px;
+
+}
+
+ol{
+    padding-left: 10px;
+    margin-left: 10px;
+}
+
+ul{
+    padding-left: 10px;
+    margin-left: 10px;
+}
+
+.textp{
+    text-align: center;
+}
+
+.darkmode li{
+    color: #292929;
+}
+
+
 
 .top_display{
     display: flex;
@@ -12,7 +81,6 @@
     justify-content: center;  
 
 }
-
 .wht {
     height: 50px;
     margin-left: 100px;
@@ -31,10 +99,12 @@ body {
 }
 
 
-.darkmode p {
+.darkmode p{
     color: #292929;
 }
-
+.darkmode a{
+    color: #292929;
+}
 .gif-animasi{
     text-align: center;
 }
@@ -61,12 +131,14 @@ body {
 
 
 
+
 .toggle_box{
     position: fixed;
     right: 0;
     padding: 10px;
     transform: translateY(-50%);
     top: 80%;
+    z-index: 9999;
 }
 
 .flex-container {
@@ -86,7 +158,7 @@ body {
     box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
 }
 
-.darkmode .flex-container .card {
+.darkmode .flex-container .card{
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 }
 
