@@ -42,11 +42,11 @@ function toggleDarkMode() {
             weather.src = './Img/morning.png';
         } 
         else if (currentTime < 18){
-            catgif.src = './Img/peach-goma.gif';
+            catgif.src = './Img/makan.gif';
             weather.src = './Img/afternoon.png';
         }   
         else{
-            catgif.src = './Img/Sleep.gif';
+            catgif.src = './Img/mobil.gif';
             weather.src = './Img/evening.png';
 
         }
