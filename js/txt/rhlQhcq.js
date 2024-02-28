@@ -20,7 +20,7 @@ const messages = {
         evening: "Heii cintakuu, kamu liat ini udah sampe rmh blm sayang, kalau msh dijalan hati-hati yaa, nanti kalau sudah sampai rumah bersih-bersih dulu ya cintaku, setelah itu baru makan nasi loh, baru deh kamu belajar sayangkuu, semangat yaa semoga konsisten, aku tau kamu pasti bisa, I love youu sayangg kuuu ❤️"
     },
     Thursday: {
-        morning: "Selamat Kamis Pagi, Semoga dipagi hari ini kondisi kamu vit ya siap untuk beraktifitas untuk hari ini.",
+        morning: "Selamat Kamis Pagi cintaku. Disana hujan ga cinta disini geremis dari sebelum shubu, aku lanjut tidur dulu, kamu semangat untuk hari ini, jngn lupa sarapan yaa sayangku, I love youu sarahkuu 😘❤️🥰😍",
         afternoon: "Selamat Siang",
         evening: "Selamat sore sayangku"
     },
