@@ -166,6 +166,17 @@ body {
     width: 250px;
 }
 
+/* countdown style */
+.darkmode h4{
+    color: black;
+}
+.darkmode #countdown{
+    color: black;
+}
+#countdown {
+    text-align: center;
+}
+
 @media screen and (max-width: 1000px) {
     * {
         font-family: "M PLUS Rounded 1c", sans-serif;
