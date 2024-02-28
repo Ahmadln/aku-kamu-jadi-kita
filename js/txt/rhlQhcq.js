@@ -16,8 +16,8 @@ const messages = {
     },
     Wednesday: {
         morning: "Selamat Pagii Ayangku, tau gasii disini hujan tauu, kamu disana hujan ga, bawa payung yaa sayng ku, kamu jngn lupa sarapan, dan semangatt ya untuk menjalani hari inii. kalau ada apaa² chat aku sayang, Akuu cintaa kamuu sarahku",
-        afternoon: "Selamat Siang cintaku, kamu istirahat siang bekalnya di habisin yaa, jngn disisain tauu mau nyisain buat siapa si, kalau buat aku mah boleh tp kan kita blm tentu ketemu hari ini, dan tetap semangattt sayangkuuu",
-        evening: "Selamat sore sayangku"
+        afternoon: "Selamat Siang cintaku, kamu istirahat siang bekalnya di habisin yaa, jngn disisain tauu mau nyisain buat siapa si, kalau buat aku mah boleh tp kan kita blm tentu ketemu hari ini, dan tetap semangattt sayangkuuu, I Love you Sarahku❤️",
+        evening: "Heii cintakuu, kamu liat ini udah sampe rmh blm sayang, kalau msh dijalan hati-hati yaa, nanti kalau sudah sampai rumah bersih-bersih dulu ya cintaku, setelah itu baru makan nasi loh, baru deh kamu belajar sayangkuu, semangat yaa semoga konsisten, aku tau kamu pasti bisa, I love youu sayangg kuuu ❤️"
     },
     Thursday: {
         morning: "Selamat Kamis Pagi, Semoga dipagi hari ini kondisi kamu vit ya siap untuk beraktifitas untuk hari ini.",
