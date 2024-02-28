@@ -187,4 +187,35 @@ document.getElementById("btnls").addEventListener("click", function() {
     
     // Memulai countdown ketika halaman dimuat
     countdown();
+// Ambil semua elemen accordion
+var accordionItems = document.querySelectorAll('.accordion-item');
+
+// Loop melalui setiap elemen dan tambahkan event listener
+accordionItems.forEach(function(item) {
+  var btn = item.querySelector('.accordion-btn');
+  var panel = item.querySelector('.panel');
+
+  btn.addEventListener('click', function() {
+    var isActive = btn.classList.contains('active');
+
+    // Tutup semua panel
+    accordionItems.forEach(function(item) {
+      var panel = item.querySelector('.panel');
+      var btn = item.querySelector('.accordion-btn');
+
+      if (panel.style.maxHeight) {
+        panel.style.maxHeight = null;
+        btn.classList.remove('active');
+      }
+    });
+
+    // Toggle kelas active pada tombol untuk mengubah warna latar belakang
+    btn.classList.toggle('active');
+
+    // Toggle max-height pada panel untuk menampilkan atau menyembunyikan konten
+    if (!isActive) {
+      panel.style.maxHeight = panel.scrollHeight + 'px';
+    }
+  });
+});
 
