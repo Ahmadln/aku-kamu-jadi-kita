@@ -6,8 +6,17 @@
         <link rel="stylesheet" href="style\animate.min.css">
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
+        
     </head>
     <body>
+        <!-- <script>
+            // Periksa apakah pengguna sudah login sebelumnya
+            var isLoggedIn = sessionStorage.getItem('isLoggedIn');
+            // Jika pengguna belum login, arahkan kembali ke halaman login
+            if (!isLoggedIn) {
+            window.location.href = './html/login.html';
+            }
+        </script> -->
         <header>
             <div class="toggle_box">                
                 <img src="./Img/cat-white.png" alt="DrakModeCat" id="whitecat"  class="blackback"  onclick="toggleDarkMode()">      
@@ -21,21 +30,6 @@
             <img id="weather" src="" alt="weather_alt" class="wht">
         </div>
         
-        <!-- script tanggal -->
-        <script>
-        // Example c: Customizing the date using options
-        const date = new Date();
-        const options = {
-            weekday: 'long',
-            year: 'numeric',
-            month: 'long',
-            day: 'numeric',
-        };
-        const date3 = date.toLocaleDateString('en-IN', options);
-        document.getElementById("formattedDate").innerHTML += "" + date3;
-        </script>
-        
-
         <!-- box chat -->
         <div class="flex-container">
             <div class="card animate__animated animate__slideInLeft" id="main-card">
@@ -44,56 +38,40 @@
 
         <script src="js/javascript.js" type="module"></script>
         
-        <!-- darkmode -->
-        <script>
-            function toggleDarkMode() {
-                
-                let isDark = document.body.classList.toggle("darkmode");
-                const myImage2 = document.getElementById("catblack");
-                let star = document.getElementById("bintang");
-                if (isDark) {
-                    myImage2.style.display = "block";
-                    star.style.display = "none";
-                } else {
-                    myImage2.style.display = "none";
-                    star.style.display = "block";
-                }
-            }
-        </script>
-
         <!-- gif -->
         <div class="gif-animasi">
             <!-- <img src="./Img/kucincouple.gif" alt="Couple"> -->
             <img id="catgif" src="" alt="Cat-gif" width="200px">
         </div>
 
-        <!-- script gif logic -->
-        <script>
-            var weather = document.getElementById('weather');
-            function getCurrentTime() {
-                return new Date().getHours();
-            }
-            var catgif = document.getElementById('catgif');
-                    
-            async function printgif() {
-                let currentTime = getCurrentTime();
-                        
-                if (currentTime < 12){
-                    catgif.src = './Img/kucincouple.gif';
-                    weather.src = './Img/morning.png';
-                } 
-                else if (currentTime < 18){
-                    catgif.src = './Img/neko-evening.gif';
-                    weather.src = './Img/afternoon.png';
-                }   
-                else{
-                    catgif.src = './Img/Sleep.gif';
-                    weather.src = './Img/evening.png';
+        <div class="menus">
+            <button id="btnls" type="menu" class="button">Lokasi</button>
+            <button id="btnmotivasi" type="menu" class="button">Motivasi</button>
 
-                }
-            }             
-            printgif();
-        </script>
+        </div>
+
+        
+
+        <div class="menu2" id="box_lokasi">
+            <p class="textp">Lokasi</p><br>
+            <p>Berikut ini Lokasi yang sudah kita kunjungin berdua bersama kamu:</p>
+            <ol type="1">
+                <li><a href="https://drive.google.com/drive/folders/1bEOQFLoN3_ZH32XnWI2ZETDopjugBdvz?usp=sharing" target="_blank" rel="noopener noreferrer">Taman Magasatwa Ragunan</a></li>
+                <li>Taman Langsat</li>
+                <li>Masjid Ramlie Musofa</li>
+            </ol>
+        </div>
+        
+        <div class="menu2" id="box_motivasi">
+            <p class="textp">Kata Motivasi</p>
+            <p>Jika kita sedang tidak semangat menjalani hidup cobalah baca kata berikut ini</p><br>
+            <ul type="-">
+                <li>Wahai orang-orang yang beriman! Mohonlah pertolongan kepada Allah dengan sabar dan shalat. Sungguh, Allah (akan selalu) bersama orang-orang yang sabar,” – Q.S Al-Baqarah (2:153).</li>
+                <br><li>Jika kamu bersyukur, Aku akan tambahkan nikmat-Nya; dan jika kamu mengingkari, maka sesungguhnya azab-Ku sangat pedih." (Al-Quran, Surah Ibrahim, 14:7)</li>
+            </ul>
+            
+        </div>
+        <script src="./js/main.js"></script> 
 
         <div class="bg-animation" id="bintang">
             <div id="stars"></div>
@@ -101,6 +79,7 @@
             <div id="stars3"></div>
             <div id="stars4"></div>
         </div>
+
         
     </body>
 </html>
