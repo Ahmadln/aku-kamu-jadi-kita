@@ -20,13 +20,12 @@
     padding: 16px 32px;
     margin-left: 5px;
 }
-.darkmode button{
+.darkmode .button{
     color: white;
 }
 
 .button:hover {
-    background-color: #001d3b;
-    color: #fff;
+    background-color: #07319b;
 }
 
 .menu2{
@@ -37,6 +36,7 @@
     text-align: justify;
     display: none;
     position: relative;
+    margin-top: 10px;
 }
 
 .darkmode .menu2{
@@ -129,7 +129,16 @@ body {
     transform: translate(0%, 0%, 0%);
 }
 
-
+/* countdown style */
+.darkmode h4{
+    color: black;
+}
+.darkmode #countdown{
+    color: black;
+}
+#countdown {
+    text-align: center;
+}
 
 
 .toggle_box{
@@ -166,16 +175,60 @@ body {
     width: 250px;
 }
 
-/* countdown style */
-.darkmode h4{
-    color: black;
+/* Style umum untuk tata letak dan penampilan accordion */
+.accordion {
+    overflow: hidden;
+    display: none;
 }
-.darkmode #countdown{
-    color: black;
+
+.accordion-item {
+    background-color: #0048ff;
+    margin: 0;
+    border-bottom: 1px solid #e6e6e6;
+    
+  }
+  
+  .accordion-item button {
+    background-color: inherit;
+    width: 100%;
+    text-align: left;
+    padding: 10px 20px;
+    border: none;
+    outline: none;
+    transition: background-color 0.3s ease;
+  }
+  
+  .accordion-item button:hover {
+    background-color: #0874d8;
+  }
+  
+  .accordion-item button.active {
+    background-color: #07319b;
+  }
+
+.accordion-item .panel {
+    
+    padding: 0 20px;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out;
+  }
+
+.darkmode .panel a{
+    color: white;
 }
-#countdown {
-    text-align: center;
+.darkmode .panel p{
+    color: white;
 }
+  
+  /* Untuk menghilangkan margin atas dan bawah pada elemen pertama dan terakhir */
+  .accordion-item:first-child {
+    border-top: none;
+  }
+  
+  .accordion-item:last-child {
+    border-bottom: none;
+  }
 
 @media screen and (max-width: 1000px) {
     * {
