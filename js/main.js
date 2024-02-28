@@ -26,6 +26,13 @@ function toggleDarkMode() {
     }
 }
 
+async function getType() {
+    const days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+    const now = new Date();
+    const dayIndex = now.getDay();
+    return days[dayIndex];
+}
+
 // <!-- script gif logic -->
 
     var weather = document.getElementById('weather');
@@ -34,23 +41,98 @@ function toggleDarkMode() {
     }
     var catgif = document.getElementById('catgif');
             
-    async function printgif() {
-        let currentTime = getCurrentTime();
-                
-        if (currentTime < 12){
-            catgif.src = './Img/kucincouple.gif';
-            weather.src = './Img/morning.png';
-        } 
-        else if (currentTime < 18){
-            catgif.src = './Img/makan.gif';
-            weather.src = './Img/afternoon.png';
-        }   
-        else{
-            catgif.src = './Img/mobil.gif';
+async function printgif() {
+    let currentTime = getCurrentTime();
+    const day = await getType();
+    switch (day) {
+        case 'Sunday':
+            if (currentTime < 12){
+                catgif.src = './Img/kucincouple.gif';
+                weather.src = './Img/morning.png';
+            } else if (currentTime <18 ){
+                catgif.src = './Img/neko-evening.gif';
+                weather.src = './Img/afternoon.png';
+            } else {
+                catgif.src = './Img/Sleep.gif';
             weather.src = './Img/evening.png';
-
+            }
+        case 'Monday':
+            if (currentTime < 12){
+                catgif.src = './Img/kucincouple.gif';
+                weather.src = './Img/morning.png';
+            } else if (currentTime <18 ){
+                catgif.src = './Img/neko-evening.gif';
+                weather.src = './Img/afternoon.png';
+            } else {
+                catgif.src = './Img/Sleep.gif';
+            weather.src = './Img/evening.png';
+            }
+                break;
+            case 'Tuesday':
+                if (currentTime < 12){
+                    catgif.src = './Img/kucincouple.gif';
+                    weather.src = './Img/morning.png';
+                } else if (currentTime <18 ){
+                    catgif.src = './Img/neko-evening.gif';
+                    weather.src = './Img/afternoon.png';
+                } else {
+                    catgif.src = './Img/Sleep.gif';
+                weather.src = './Img/evening.png';
+                }
+                break;
+            case 'Wednesday':
+                if (currentTime < 12){
+                    catgif.src = './Img/makan.gif';
+                    weather.src = './Img/morning.png';
+                } else if (currentTime <18 ){
+                    catgif.src = './Img/makan.gif';
+                    weather.src = './Img/afternoon.png';
+                } else {
+                    catgif.src = './Img/mobil.gif';
+                weather.src = './Img/evening.png';
+                }
+                break;
+            case 'Thursday':
+                if (currentTime < 12){
+                    catgif.src = './Img/kucincouple.gif';
+                    weather.src = './Img/morning.png';
+                } else if (currentTime <18 ){
+                    catgif.src = './Img/neko-evening.gif';
+                    weather.src = './Img/afternoon.png';
+                } else {
+                    catgif.src = './Img/Sleep.gif';
+                weather.src = './Img/evening.png';
+                }
+                break;
+            case 'Friday':
+                if (currentTime < 12){
+                    catgif.src = './Img/kucincouple.gif';
+                    weather.src = './Img/morning.png';
+                } else if (currentTime <18 ){
+                    catgif.src = './Img/neko-evening.gif';
+                    weather.src = './Img/afternoon.png';
+                } else {
+                    catgif.src = './Img/Sleep.gif';
+                weather.src = './Img/evening.png';
+                }
+                break;
+            case 'Saturday':
+                if (currentTime < 12){
+                    catgif.src = './Img/kucincouple.gif';
+                    weather.src = './Img/morning.png';
+                } else if (currentTime <18 ){
+                    catgif.src = './Img/neko-evening.gif';
+                    weather.src = './Img/afternoon.png';
+                } else {
+                    catgif.src = './Img/Sleep.gif';
+                weather.src = './Img/evening.png';
+                }
+                break;
+            default:
+                message = "Hello!";
         }
-    }             
+
+}       
     printgif();
 
 var box = document.getElementById("box_motivasi");
@@ -73,5 +155,36 @@ document.getElementById("btnls").addEventListener("click", function() {
         }
     });
 
-
+   function countdown() {
+        // Membuat tanggal target (contohnya 29 Februari 2024 pukul 18:00)
+        const targetDate = new Date('2024-03-02T14:00:00');
+    
+        const countdownElement = document.getElementById('countdown');
+    
+        // Update countdown setiap detik
+        const intervalId = setInterval(updateCountdown, 1000);
+    
+        function updateCountdown() {
+            const now = new Date();
+            const difference = targetDate - now;
+    
+            if (difference <= 0) {
+                clearInterval(intervalId);
+                countdownElement.textContent = 'Countdown selesai!';
+            } else {
+                const days = Math.floor(difference / (1000 * 60 * 60 * 24));
+                const hours = Math.floor((difference / (1000 * 60 * 60)) % 24);
+                const minutes = Math.floor((difference / (1000 * 60)) % 60);
+                const seconds = Math.floor((difference / 1000) % 60);
+    
+                countdownElement.textContent = `${days} hari, ${hours} jam, ${minutes} menit, ${seconds} detik`;
+            }
+        }
+    
+        // Memastikan countdown diupdate segera setelah halaman dimuat
+        updateCountdown();
+    }
+    
+    // Memulai countdown ketika halaman dimuat
+    countdown();
 
