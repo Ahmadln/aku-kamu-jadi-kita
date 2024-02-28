@@ -1,6 +1,8 @@
 // <!-- script tanggal -->
 
         // Example c: Customizing the date using options
+
+
 const date = new Date();
 const options = {
     weekday: 'long',
@@ -10,6 +12,13 @@ const options = {
     };
 const date3 = date.toLocaleDateString('en-IN', options);
 document.getElementById("formattedDate").innerHTML += "" + date3;
+
+async function getType() {
+    const days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+    const now = new Date();
+    const dayIndex = now.getDay();
+    return days[dayIndex];
+}
 
 
 // <!-- darkmode -->
@@ -24,13 +33,6 @@ function toggleDarkMode() {
         myImage2.style.display = "none";
         star.style.display = "block";
     }
-}
-
-async function getType() {
-    const days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
-    const now = new Date();
-    const dayIndex = now.getDay();
-    return days[dayIndex];
 }
 
 // <!-- script gif logic -->
@@ -88,7 +90,7 @@ async function printgif() {
                     catgif.src = './Img/makan.gif';
                     weather.src = './Img/afternoon.png';
                 } else {
-                    catgif.src = './Img/mobil.gif';
+                    catgif.src = './Img/Sleep.gif';
                 weather.src = './Img/evening.png';
                 }
                 break;
@@ -132,17 +134,19 @@ async function printgif() {
                 message = "Hello!";
         }
 
-}       
+}             
     printgif();
 
 var box = document.getElementById("box_motivasi");
 var box2 = document.getElementById("box_lokasi");
+var box3 = document.getElementById("box_lagu")
 document.getElementById("btnmotivasi").addEventListener("click", function() {
 if (box.style.display === "block") {
     box.style.display = "none";
     } else {
     box.style.display = "block";
     box2.style.display = "none";
+    box3.style.display = "none";
     }
 });
 
@@ -152,10 +156,22 @@ document.getElementById("btnls").addEventListener("click", function() {
         } else {
         box2.style.display = "block";
         box.style.display = "none";
+        box3.style.display = "none";
+
         }
     });
 
-   function countdown() {
+    document.getElementById("btnlagu").addEventListener("click", function() {
+        if (box3.style.display === "block") {
+            box3.style.display = "none";
+            } else {
+            box3.style.display = "block";
+            box.style.display = "none";
+            box2.style.display = "none";
+            }
+        });
+
+    function countdown() {
         // Membuat tanggal target (contohnya 29 Februari 2024 pukul 18:00)
         const targetDate = new Date('2024-03-02T14:00:00');
     
@@ -187,6 +203,7 @@ document.getElementById("btnls").addEventListener("click", function() {
     
     // Memulai countdown ketika halaman dimuat
     countdown();
+
 // Ambil semua elemen accordion
 var accordionItems = document.querySelectorAll('.accordion-item');
 
@@ -219,3 +236,28 @@ accordionItems.forEach(function(item) {
   });
 });
 
+
+// untuk music
+var currentlagu = null;
+var musicPlayer = {};
+
+
+function toggle(laguId) {
+  var lagu = document.getElementById(laguId);
+
+  if (currentlagu && currentlagu !== lagu) {
+    currentlagu.style.display = 'none'; // Sembunyikan lagu yang sedang diputar sebelumnya
+    currentlagu.pause(); // Jika ada lagu yang sedang diputar dan bukan lagu yang baru akan diputar, hentikan lagu tersebut
+  }
+
+  var laguDisplayStyle = window.getComputedStyle(lagu).display;
+  if (laguDisplayStyle === 'none') {
+    lagu.style.display = 'block';
+    lagu.play();
+    currentlagu = lagu;
+  } else {
+    lagu.style.display = 'none';
+    lagu.pause();
+    currentlagu = null;
+  }
+}
