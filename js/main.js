@@ -267,22 +267,32 @@ function toggle(laguId) {
     }
 }
 
+
 // Fungsi untuk memainkan lagu berikutnya
 function playNextLagu() {
-  // Temukan lagu berikutnya dalam urutan Anda dan mainkan
-  // Di sini Anda dapat menambahkan logika untuk menemukan lagu berikutnya
-  // Misalnya, jika Anda memiliki array lagu, Anda dapat meningkatkan indeksnya dan memainkan lagu selanjutnya.
-  // Untuk tujuan demonstrasi, saya hanya akan menambahkan kode untuk memainkan lagu berikutnya secara acak.
-    var laguList = document.getElementsByClassName('lagu');
-    var randomIndex = Math.floor(Math.random() * laguList.length);
-    var nextLagu = laguList[randomIndex];
-
-  // Mainkan lagu berikutnya
-    if (nextLagu) {
-        toggle(nextLagu.id);
-    // Menyembunyikan lagu sebelumnya saat memainkan lagu baru
-        if (currentlagu && currentlagu !== nextLagu) {
-        currentlagu.style.display = 'none';
+    // Temukan indeks lagu berikutnya dalam urutan
+    var nextIndex = -1;
+    if (currentlagu) {
+      var laguList = document.getElementsByClassName('lagu');
+      for (var i = 0; i < laguList.length; i++) {
+        if (laguList[i].id === currentlagu.id) {
+          nextIndex = i + 1;
+          break;
         }
+      }
+    } else {
+      nextIndex = 0; // Jika tidak ada lagu yang sedang diputar, mulai dengan lagu pertama
     }
-}
+  
+    // Mainkan lagu berikutnya jika ada
+    if (nextIndex !== -1 && nextIndex < laguList.length) {
+      var nextLagu = laguList[nextIndex];
+      toggle(nextLagu.id);
+  
+      // Sembunyikan lagu sebelumnya saat memainkan lagu baru
+      if (currentlagu && currentlagu !== nextLagu) {
+        currentlagu.style.display = 'none';
+      }
+    }
+  }
+
