@@ -241,23 +241,48 @@ accordionItems.forEach(function(item) {
 var currentlagu = null;
 var musicPlayer = {};
 
-
 function toggle(laguId) {
-  var lagu = document.getElementById(laguId);
+    var lagu = document.getElementById(laguId);
 
-  if (currentlagu && currentlagu !== lagu) {
+    if (currentlagu && currentlagu !== lagu) {
     currentlagu.style.display = 'none'; // Sembunyikan lagu yang sedang diputar sebelumnya
     currentlagu.pause(); // Jika ada lagu yang sedang diputar dan bukan lagu yang baru akan diputar, hentikan lagu tersebut
-  }
+    }
 
-  var laguDisplayStyle = window.getComputedStyle(lagu).display;
-  if (laguDisplayStyle === 'none') {
+    var laguDisplayStyle = window.getComputedStyle(lagu).display;
+    if (laguDisplayStyle === 'none') {
     lagu.style.display = 'block';
     lagu.play();
     currentlagu = lagu;
-  } else {
-    lagu.style.display = 'none';
-    lagu.pause();
-    currentlagu = null;
-  }
+    
+    // Tambahkan event listener untuk deteksi lagu selesai diputar
+    lagu.addEventListener('ended', function() {
+      // Panggil fungsi untuk memainkan lagu berikutnya secara otomatis
+        playNextLagu();
+    });
+    } else {
+        lagu.style.display = 'none';
+        lagu.pause();
+        currentlagu = null;
+    }
+}
+
+// Fungsi untuk memainkan lagu berikutnya
+function playNextLagu() {
+  // Temukan lagu berikutnya dalam urutan Anda dan mainkan
+  // Di sini Anda dapat menambahkan logika untuk menemukan lagu berikutnya
+  // Misalnya, jika Anda memiliki array lagu, Anda dapat meningkatkan indeksnya dan memainkan lagu selanjutnya.
+  // Untuk tujuan demonstrasi, saya hanya akan menambahkan kode untuk memainkan lagu berikutnya secara acak.
+    var laguList = document.getElementsByClassName('lagu');
+    var randomIndex = Math.floor(Math.random() * laguList.length);
+    var nextLagu = laguList[randomIndex];
+
+  // Mainkan lagu berikutnya
+    if (nextLagu) {
+        toggle(nextLagu.id);
+    // Menyembunyikan lagu sebelumnya saat memainkan lagu baru
+        if (currentlagu && currentlagu !== nextLagu) {
+        currentlagu.style.display = 'none';
+        }
+    }
 }
