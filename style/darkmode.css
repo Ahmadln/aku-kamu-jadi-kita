@@ -1,0 +1,80 @@
+.darkmode .button{
+    background-color: #edfbff;
+    color: black;
+    border-color: rgb(229, 234, 255);
+    
+}
+
+.darkmode .button:hover{
+    background-color: #a7ecff;
+    border-color: rgb(3, 141, 151);
+    
+}
+
+.darkmode .menu2{
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+
+.darkmode li{
+    color: #292929;
+}
+
+
+.darkmode p{
+    color: #292929;
+}
+.darkmode a{
+    color: #292929;
+}
+
+
+.darkmode {
+    background-color: #f8f9fc;
+}
+
+.darkmode h1 {
+    color: #292929 ;
+}
+
+.darkmode h4{
+    color: black;
+}
+.darkmode #countdown{
+    color: black;
+}
+
+.darkmode .flex-container .card{
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+
+.darkmode .panel a{
+    color: rgb(6, 6, 6);
+}
+.darkmode .panel p{
+    color: white;
+}
+
+
+.darkmode .accordion-item {
+    background-color: #cafbff;
+    border-color: rgb(222, 251, 255);
+}
+
+.darkmode .accordion-item button{
+    color: black;
+    background-color: #a7ecff;
+}
+
+.darkmode .accordion-item button:hover{
+    background-color: #81e4ff;
+}
+
+.darkmode .accordion-item button.active{
+    background-color: #a7ecff;
+}
+
+.darkmode .panel p{
+    color: black;
+}
