@@ -2,8 +2,9 @@
 <html lang="en">
     <head>
         <title>Aku Kamu jadi Kita</title>
-        <link rel="stylesheet" href="style\sytle.css">
-        <link rel="stylesheet" href="style\animate.min.css">
+        <link rel="stylesheet" href="./style/sytle.css">
+        <link rel="stylesheet" href="./style/darkmode.css">
+        <link rel="stylesheet" href="./style/animate.min.css">
         <meta charset="utf-8">
         <link rel="icon" href="./Img/cat-white.png">
         <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -11,7 +12,7 @@
         
     </head>
     <body>
-       
+        
         <header>
             <img src="" alt="">
             <div class="toggle_box">                
@@ -102,8 +103,9 @@
             
             <div class="menu2" id="box_lagu">
                 <h4>Daftar lagu</h4><br>
-                <p onclick="toggle('lagu1')">Penjaga hati -Nadhif basalamah</p><br>
-                <p onclick="toggle('lagu2')">Hall Hebat -Govinda</p>
+                <p onclick="toggle('lagu1')" class="buttonmusic">Penjaga hati -Nadhif basalamah</p><br>
+                <p onclick="toggle('lagu2')" class="buttonmusic">Hall Hebat -Govinda</p><br>
+                <p onclick="toggle('lagu3')" class="buttonmusic">Fix You - Coldplay</p>
             </div>
             
             
@@ -111,14 +113,20 @@
             
             
             <div id="musicPlayer1" >
-                <audio id="lagu1" class="lagu" controls>
+                <audio id="lagu1" class="lagu" controls onended="playNext('lagu2')">
                     <source src="./music/nadhif basalamah - penjaga hati.mp3" type="audio/mp3">
                     Your browser does not support the audio element.
                 </audio>
             </div>
             <div id="musicPlayer2" >
-                <audio id="lagu2" class="lagu" controls>
+                <audio id="lagu2" class="lagu" controls onended="playNext('lagu3')">
                     <source src="./music/Govinda-Hal Hebat.mp3" type="audio/mp3">
+                    Your browser does not support the audio element.
+                </audio>
+            </div>
+            <div id="musicPlayer3" >
+                <audio id="lagu3" class="lagu" controls>
+                    <source src="./music/Coldplay - Fix You.mp3" type="audio/mp3">
                     Your browser does not support the audio element.
                 </audio>
             </div><br>
