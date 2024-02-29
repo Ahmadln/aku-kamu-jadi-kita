@@ -30,7 +30,7 @@
 
 
 .darkmode {
-    background-color: #f8f9fc;
+    background-color: #d7f8fae8;
 }
 
 .darkmode h1 {
@@ -72,9 +72,26 @@
 }
 
 .darkmode .accordion-item button.active{
-    background-color: #a7ecff;
+    background-color: #81e4ff;
 }
 
 .darkmode .panel p{
     color: black;
+}
+
+.darkmode .snowflake {
+    display: block;
+    position: absolute;
+    background-color: #60c2fa;
+    border-radius: 50%;
+    animation: snow-fall linear infinite;
+}
+
+@keyframes snow-fall {
+    0% {
+        transform: translateY(-100%);
+    }
+    100% {
+        transform: translateY(100vh);
+    }
 }
