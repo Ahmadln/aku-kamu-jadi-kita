@@ -16,13 +16,13 @@
 .button{
     background-color: #212121;
     color: #fff;
-    border: 1px solid #c5c5c5;
+    border: 2px solid #c5c5c5;
+    border-radius: 5px;
     padding: 10px;
     margin-left: 5px;
+    font-weight: bold;
 }
-.darkmode .button{
-    color: white;
-}
+
 
 .button:hover {
     background-color: #002344;
@@ -39,9 +39,7 @@
     margin-top: 10px;
 }
 
-.darkmode .menu2{
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-}
+
 
 
 #playPauseButton{
@@ -69,10 +67,6 @@ ul{
     text-align: center;
 }
 
-.darkmode li{
-    color: #292929;
-}
-
 
 
 .top_display{
@@ -98,25 +92,10 @@ body {
     padding: 10px;
 }
 
-
-.darkmode p{
-    color: #292929;
-}
-.darkmode a{
-    color: #292929;
-}
 .gif-animasi{
     text-align: center;
 }
 
-
-.darkmode {
-    background-color: #f8f9fc;
-}
-
-.darkmode h1 {
-    color: #292929 ;
-}
 
 .blackback{
     width: 65px;
@@ -130,12 +109,6 @@ body {
 }
 
 /* countdown style */
-.darkmode h4{
-    color: black;
-}
-.darkmode #countdown{
-    color: black;
-}
 #countdown {
     text-align: center;
 }
@@ -167,9 +140,7 @@ body {
     box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
 }
 
-.darkmode .flex-container .card{
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-}
+
 
 .gif{
     width: 250px;
@@ -184,11 +155,11 @@ body {
 .accordion-item {
     background-color: #212121;
     margin: 0;
-    border-bottom: 1px solid #e6e6e6;
-    
-  }
-  
-  .accordion-item button {
+    border-bottom: 2px solid #e6e6e6;
+
+}
+
+.accordion-item button {
     background-color: inherit;
     width: 100%;
     text-align: left;
@@ -196,15 +167,15 @@ body {
     border: none;
     outline: none;
     transition: background-color 0.3s ease;
-  }
-  
-  .accordion-item button:hover {
+}
+
+.accordion-item button:hover {
     background-color: #002344;
-  }
-  
-  .accordion-item button.active {
-    background-color: #02133c;
-  }
+}
+
+.accordion-item button.active {
+    background-color: #000f33;
+}
 
 .accordion-item .panel {
     
@@ -212,21 +183,15 @@ body {
     max-height: 0;
     overflow: hidden;
     transition: max-height 0.3s ease-out;
-  }
+}
 
-.darkmode .panel a{
-    color: white;
-}
-.darkmode .panel p{
-    color: white;
-}
-  
+
   /* Untuk menghilangkan margin atas dan bawah pada elemen pertama dan terakhir */
-  .accordion-item:first-child {
+.accordion-item:first-child {
     border-top: none;
-  }
-  
-  .accordion-item:last-child {
+}
+
+.accordion-item:last-child {
     border-bottom: none;
 }
 
@@ -238,16 +203,20 @@ body {
     transform: translateX(-50%);
     text-align: center;
     padding: 10px;
-    
+    display: none;
 }
 
+.buttonmusic:hover{
+    color: rgb(5, 243, 136);
+}
+/* 
 #lagu1{
-    display: none;
+    
 }
 
 #lagu2{
     display: none;
-}
+} */
 
 @media screen and (max-width: 1000px) {
     * {
