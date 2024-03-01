@@ -30,9 +30,9 @@ const messages = {
         evening: "Malam cintaku, thankyou for today,Akuu akan selalu ada untuk kamu, I love youu "
     },
     Saturday: {
-        morning: "Selamat Sabtu Pagi, Semoga dipagi hari ini kondisi kamu vit ya siap untuk beraktifitas untuk hari ini.",
-        afternoon: "Selamat Siang",
-        evening: "Selamat sore sayangku"
+        morning: "Selamat Sabtu Pagi sayangku, tetap semangatt yaa nanti kita ketemu lagi aku jemput, kamu hati² yaa dijalan berangkat kerjanya.",
+        afternoon: "Selamat Siang sayangku, nanti kalau aku blm bales chat berarti msh dijalan yaa cintaku, sabar yaa nanti kitaa ngobrol² bahas apapun sampe puas, lovee you",
+        evening: "Selamat malam sayang, gimana seneng gaa jalan berdua sama kauu heheheh"
     },
     Default: "Hello!"
 };
