@@ -173,7 +173,7 @@ document.getElementById("btnls").addEventListener("click", function() {
 
     function countdown() {
         // Membuat tanggal target (contohnya 29 Februari 2024 pukul 18:00)
-        const targetDate = new Date('2024-03-01T17:50:00');
+        const targetDate = new Date('2024-03-02T14:10:00');
     
         const countdownElement = document.getElementById('countdown');
     
@@ -186,7 +186,7 @@ document.getElementById("btnls").addEventListener("click", function() {
     
             if (difference <= 0) {
                 clearInterval(intervalId);
-                countdownElement.textContent = 'Countdown selesai!';
+                countdownElement.textContent = 'Kita Berjumpa cintaku';
             } else {
                 const days = Math.floor(difference / (1000 * 60 * 60 * 24));
                 const hours = Math.floor((difference / (1000 * 60 * 60)) % 24);
