@@ -1,9 +1,4 @@
 const messages = {
-    Sunday: {
-        morning: "Selamat Pagi Cintaku, Semoga dipagi minggu ini kondisi kamu vit ya siap untuk beraktifitas untuk hari ini.",
-        afternoon: "Selamat Siang",
-        evening: "Selamat sore sayangku"
-    },
     Monday: {
         morning: "Pagi cintaku, Semoga dipagi hari ini kondisi kamu vit ya sayang. Jangan biarkan Senin merusak semangatmu, Bersamamu kita hadapi segala hal cintaku. I Love you sayangku❤️ ",
         afternoon: "Siang sayangku, Terimakasih Selalu ada untuk ku sayang, aku juga akan selalu ada untuk kamu, di siang ini kamu tetap semagat yaa menjalani hari ini. I Love you Sarahku❤️",
@@ -33,6 +28,11 @@ const messages = {
         morning: "Selamat Sabtu Pagi sayangku, tetap semangatt yaa nanti kita ketemu lagi aku jemput, kamu hati² yaa dijalan berangkat kerjanya.",
         afternoon: "Selamat Siang sayangku, nanti kalau aku blm bales chat berarti msh dijalan yaa cintaku, sabar yaa nanti kitaa ngobrol² bahas apapun sampe puas, lovee you",
         evening: "Selamat malam sayang, gimana seneng gaa jalan berdua sama kauu heheheh"
+    },
+Sunday: {
+        morning: "Selamat Pagii sayangku, aku bersyukur banget memiliki kamuu, aku takut kehilangan kamuu cintaku, maaf kemarin bercandanya aku berlebihan ya seharusnya ga keluar kata itu 😭, akuu cintaa kamu de sarahh kuuu, I love you so much",
+        afternoon: "Selamat Siang, cintakuu kamu hari ini ada mau keluar ga, kalau mau keluar makan dulu yaa sayang",
+        evening: "Selamat malam sayangku, Terimakasih untuk kamu yg menerima akuu, dan kamuu jngn insecure yaa, kamu jg harus memcoba menerima diri kamu sendiri loh sayangku, I Love youu ❤️❤️"
     },
     Default: "Hello!"
 };
