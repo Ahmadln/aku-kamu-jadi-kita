@@ -52,6 +52,7 @@ async function printMessage() {
             } else {
                 message = messages.Sunday.evening
             }
+            break;
         case 'Monday':
             if (currentTime < 12){
                 message = messages.Monday.morning
