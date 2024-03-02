@@ -49,7 +49,7 @@ async function printgif() {
     switch (day) {
         case 'Sunday':
             if (currentTime < 12){
-                catgif.src = './Img/kucincouple.gif';
+                catgif.src = './Img/gendong.gif';
                 weather.src = './Img/morning.png';
             } else if (currentTime <18 ){
                 catgif.src = './Img/neko-evening.gif';
@@ -58,6 +58,7 @@ async function printgif() {
                 catgif.src = './Img/Sleep.gif';
             weather.src = './Img/evening.png';
             }
+                    break;
         case 'Monday':
             if (currentTime < 12){
                 catgif.src = './Img/kucincouple.gif';
