@@ -90,7 +90,7 @@ body {
     background-color: #292929;
     margin: 10px;
     padding: 10px;
-    
+    /* overflow: hidden; */
 }
 
 .gif-animasi{
@@ -99,8 +99,8 @@ body {
 
 
 .blackback{
-    width: 65px;
-    height: 58px;
+    width: 45px;
+    height: 38px;
     position: absolute;
     margin-top: 20px;
     margin-right: 20px;
@@ -215,15 +215,10 @@ body {
     color: rgb(5, 73, 243);
 }
 
-
-/* 
-#lagu1{
-    
+#formattedDate{
+    font-weight: bold;
 }
 
-#lagu2{
-    display: none;
-} */
 
 @media screen and (max-width: 1000px) {
     * {
@@ -259,10 +254,6 @@ body {
 
 }
 
-
-.snowflake {
-    display: none;
-}
 
 
 
