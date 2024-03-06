@@ -12,7 +12,14 @@
         
     </head>
     <body>
-
+        <script>
+            // Periksa apakah pengguna sudah login sebelumnya
+            var isLoggedIn = sessionStorage.getItem('isLoggedIn');
+            // Jika pengguna belum login, arahkan kembali ke halaman login
+            if (!isLoggedIn) {
+            window.location.href = './html/login.html';
+            }
+        </script>
         <header>
             <img src="" alt="">
             <div class="toggle_box">                
@@ -23,8 +30,14 @@
         
         <br/>
         <div class="top_display">
-            <p id="formattedDate"></p>
-            <img id="weather" src="" alt="weather_alt" class="wht">
+            <div class="value1">
+                <p id="formattedDate"></p>
+                <span id="city"></span>
+            </div>
+            <div class="value2">
+                <img id="weather" src="" alt="weather_alt" class="wht">
+                <span id="suhu"></span>
+            </div>
         </div>
         
         <!-- box chat -->
@@ -45,6 +58,7 @@
             <button id="btnls" type="menu" class="button">Lokasi</button>
             <button id="btnmotivasi" type="menu" class="button">Motivasi</button>
             <button id="btnlagu" type="menu" class="button">Lagu</button>
+            <button id="btntujuan" type="menu" class="button">Tujuan</button>
 
         </div>
         <br>
@@ -53,41 +67,37 @@
             <div class="accordion-item">
                 <button class="accordion-btn">Taman Margasatwa Ragunan</button>
                 <div class="panel"><br>
-                    <p>Taman Margasatwa Ragunan atau juga disebut Kebun Binatang Ragunan adalah sebuah kebun binatang yang terletak di daerah Ragunan, Pasar Minggu, Jakarta Selatan, Indonesia. Kebun binatang seluas 140 hektare ini didirikan pada tahun 1864.</p><br>
-                        <a href="https://drive.google.com/drive/folders/1bEOQFLoN3_ZH32XnWI2ZETDopjugBdvz?usp=sharing" target="_blank" rel="noopener noreferrer">Foto saat di Taman Magasatwa Ragunan</a>
-                        <br><br>
+                    <span id="ragunan"></span>
                     </div>
                 </div>
                 <div class="accordion-item">
                     <button class="accordion-btn">Taman Langsat</button>
                     <div class="panel"><br>
-                        <p>Taman Langsat adalah taman yang berada di di Jalan Langsat Kebayoran Baru Jakarta Selatan, di belakang Pasar Burung Barito. Taman ini mempunyai luas lahan seluas 3,6 hektar.</p><br>
-                        <a href="https://drive.google.com/drive/folders/1b3kvN90dcJKYHpxw7O6fTewjhLvtxSBd?usp=drive_link" target="_blank" rel="noopener noreferrer">Taman Langsat</a>
-                        <br><br>
+                        <span id="langsat"></span>
                     </div>
                 </div>
                 <div class="accordion-item">
                     <button class="accordion-btn">Masjid Ramlie Musofa</button>
                     <div class="panel"><br>
-                        <p>Masjid Ramlie Musofa terletak di Jakarta Utara, Daerah Khusus Ibukota Jakarta. Masjid ini mulai dibangun pada 2011 oleh keluarga Ramli Rasidin dan diresmikan pada Mei 2016 oleh Prof. Dr. Nasaruddin Umar.</p><br>
-                        <a href="https://drive.google.com/drive/folders/1fIRn7aLk60tc5qWRPy9fX7zAdx1D0AqN?usp=drive_link" target="_blank" rel="noopener noreferrer">Masjid Ramlie Musofa</a>
-                        <br><br>
+                        <span id="musofa"></span>
                     </div>
                 </div>
                 <div class="accordion-item">
                     <button class="accordion-btn">Kopi Nako Daur Baur</button>
                     <div class="panel"><br>
-                        <p>Kopi Nako Daur Baur yang terletak di kawasan Senayan Park Jakarta Selatan. Mengusung konsep daur ulang, terlihat susunan bekas cup atau gelas plastik yang dirangkai menjadi elemen dinding. </p><br>
-                        <a href="https://drive.google.com/drive/folders/12u1ICS5iSlh_GyDz_zy21wqKYg5RhjlK?usp=drive_link" target="_blank" rel="noopener noreferrer">Kopi Nako Daur Baur</a>
-                        <br><br>
+                        <span id="baur"></span>
                     </div>
                 </div>
                 <div class="accordion-item">
                     <button class="accordion-btn">Kondangan</button>
                     <div class="panel"><br>
-                        <p>Tradisi kondangan menjadi sarana penting dalam melestarikan keberagaman budaya di Indonesia. Selain itu, kondangan juga menjadi ajang silaturahmi antara warga setempat, terutama ketika acara tersebut dihadiri oleh tamu dari berbagai daerah atau keluarga yang jarang bertemu.</p><br>
-                        <a href="https://drive.google.com/drive/folders/1xhDO6-_Gj_gXIwXKEDg94obzgadIbGet?usp=drive_link" target="_blank" rel="noopener noreferrer">Kondangan</a>
-                        <br><br>
+                        <span id="kondangan"></span>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <button class="accordion-btn">Ancol</button>
+                    <div class="panel"><br>
+                        <span id="ancol"></span>
                     </div>
                 </div>
             </div>
@@ -104,12 +114,28 @@
 
                 </ul>
             </div>
+
+            <div class="accordion" id="box_tujuan">
+                <div class="accordion-item">
+                    <button class="accordion-btn">Ahmad Maulana</button>
+                    <div class="panel"><br>
+                        <span id="lana"></span>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <button class="accordion-btn">Sarah Salsabila Putri</button>
+                    <div class="panel"><br>
+                        <span id="sarah"></span>
+                    </div>
+                </div>
+            </div>
             
-            <div class="menu2" id="box_lagu">
-                <h4>Daftar lagu</h4><br>
-                <p onclick="toggle('lagu1')" class="buttonmusic">Penjaga hati -Nadhif basalamah</p><br>
-                <p onclick="toggle('lagu2')" class="buttonmusic">Hall Hebat -Govinda</p><br>
+            <div class="" id="box_lagu">
+                <h4 style="text-align: center;">Daftar lagu</h4><br>
+                <p onclick="toggle('lagu1')" class="buttonmusic">Penjaga hati -Nadhif basalamah</p>
+                <p onclick="toggle('lagu2')" class="buttonmusic">Hall Hebat -Govinda</p>
                 <p onclick="toggle('lagu3')" class="buttonmusic">Fix You - Coldplay</p>
+                <p onclick="toggle('lagu4')" class="buttonmusic">Perempuanku -Irwansyah</p>
             </div>
             
             
@@ -133,12 +159,19 @@
                     <source src="./music/Coldplay - Fix You.mp3" type="audio/mp3">
                     Your browser does not support the audio element.
                 </audio>
+            </div>
+            <div id="musicPlayer4" >
+                <audio id="lagu4" class="lagu" controls>
+                    <source src="https://drive.google.com/file/d/1BoZ17mZOCS0pwxb1XTTncAEpMEo8YFwu/view?usp=sharing/Vagetoz - (BAM) Betapa Aku Mencintaimu.mp3" type="audio/mp3">
+                    Your browser does not support the audio element.
+                </audio>
             </div><br>
         <div>
             <h4 class="textp">Hitung Mundur kita akan ketemu sayangku</h4>
             <div id="countdown"></div><br><br><br>
         </div>
         <script src="./js/main.js"></script> 
+        <script src="./js/txt/txt.js"></script> 
 
         <div class="bg-animation" id="bintang">
             <div id="stars"></div>
