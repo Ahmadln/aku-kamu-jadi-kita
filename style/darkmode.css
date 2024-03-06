@@ -1,11 +1,20 @@
+.darkmode * {
+    color: black;
+}
 .darkmode .button{
-    background-color: #edfbff;
+    background-color: #e2f9ff;
     color: black;
     border-color: rgb(229, 234, 255);
     
 }
 
 .darkmode .button:hover{
+    background-color: #a7ecff;
+    border-color: rgb(3, 141, 151);
+    
+}
+
+.darkmode .button::after{
     background-color: #a7ecff;
     border-color: rgb(3, 141, 151);
     
@@ -28,9 +37,13 @@
     color: #292929;
 }
 
+.darkmode .buttonmusic{
+    background-color:  #a7ecff;
+}
+
 
 .darkmode {
-    background-color: #d7f8fae8;
+    background-color: #aff8fce8;
 }
 
 .darkmode h1 {
@@ -72,26 +85,10 @@
 }
 
 .darkmode .accordion-item button.active{
-    background-color: #81e4ff;
+    background-color: #81cbff;
 }
 
 .darkmode .panel p{
     color: black;
 }
 
-.darkmode .snowflake {
-    display: block;
-    position: absolute;
-    background-color: #60c2fa;
-    border-radius: 50%;
-    animation: snow-fall linear infinite;
-}
-
-@keyframes snow-fall {
-    0% {
-        transform: translateY(-100%);
-    }
-    100% {
-        transform: translateY(100vh);
-    }
-}
