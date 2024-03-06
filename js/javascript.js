@@ -1,4 +1,7 @@
 import messages from "./txt/rhlQhcq.js";
+
+
+const date = new Date()
 async function getType() {
     const days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
     const now = new Date();
@@ -38,21 +41,12 @@ function getCurrentTime() {
 
 // Example usage:
 async function printMessage() {
-    const day = await getType();
     let currentTime = getCurrentTime();
+    const day = await getType();
     let message = '';
 
     // Choose message based on the day
     switch (day) {
-        case 'Sunday':
-            if (currentTime < 12){
-                message = messages.Sunday.morning
-            } else if (currentTime <18 ){
-                message = messages.Sunday.afternoon
-            } else {
-                message = messages.Sunday.evening
-            }
-            break;
         case 'Monday':
             if (currentTime < 12){
                 message = messages.Monday.morning
@@ -107,15 +101,24 @@ async function printMessage() {
                 message = messages.Saturday.evening
             }
             break;
+        case 'Sunday':
+            if (currentTime < 12){
+                message = messages.Sunday.morning
+            } else if (currentTime <18 ){
+                message = messages.Sunday.afternoon
+            } else {
+                message = messages.Sunday.evening
+            }
+            break;
         default:
-            message = "Hello!";
+            message = messages.Default;
     }
 
     typewriter(message, "main-card-text");
 }
-
-
-console.log("Create By Ahmad Maulana")
+const day = await getType();
+console.log(day);
+console.log("Create By Ahmad Maulana");
 printMessage();
 
 // In this code:
