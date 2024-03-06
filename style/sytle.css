@@ -71,18 +71,23 @@ ul{
 
 .top_display{
     display: flex;
-    align-items: center;
-    justify-content: center;  
-
+    flex-direction: row;
 }
+
 .wht {
     height: 50px;
-    margin-left: 100px;
 }
 
-#formattedDate {
-    margin: 0;
+
+
+.value1{
     
+    padding-right: 10%;
+}
+
+.value2{
+    
+    padding-left: 10%;
 }
 
 
@@ -211,12 +216,22 @@ body {
     display: none;
 }
 
+.buttonmusic{
+    border: 1px solid white;
+    background-color: #202020;
+    padding: 10px;
+}
+
 .buttonmusic:hover{
-    color: rgb(5, 73, 243);
+    background-color: rgb(53, 80, 147);
 }
 
 #formattedDate{
     font-weight: bold;
+}
+
+#box_lagu{
+    display: none;
 }
 
 
