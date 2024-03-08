@@ -25,9 +25,9 @@ const messages = {
         evening: "Malam cintaku, thankyou for today,Akuu akan selalu ada untuk kamu, I love youu "
     },
     Saturday: {
-        morning: "Selamat Sabtu Pagi sayangku, tetap semangatt yaa nanti kita ketemu lagi aku jemput, kamu hati² yaa dijalan berangkat kerjanya.",
-        afternoon: "Selamat Siang sayangku, nanti kalau aku blm bales chat berarti msh dijalan yaa cintaku, sabar yaa nanti kitaa ngobrol² bahas apapun sampe puas, lovee you",
-        evening: "Selamat malam sayang, gimana seneng gaa jalan berdua sama kauu heheheh"
+        morning: "Selamat Sabtu Pagi sayangku, tetap semangatt yaa, Akuu sayang bangett sama kamuu, I love youu sarah kuu ❤️❤️😘",
+        afternoon: "Selamat Siang sayang, kita ketemu minggu yaa sayang, tetap semangatt kerjanya, nanti pulang hati² yaa cintakuu, lovee you",
+        evening: "Selamat malam sayang, gimana kamu hari ini, semoga ga ada masalaha ya, kalau ada apa² yg di pikirin cerita ke akuu yaa. I love youuuu sarah ❤️"
     },
 Sunday: {
         morning: "Selamat Pagii sayangku, aku bersyukur banget memiliki kamuu, aku takut kehilangan kamuu cintaku, maaf kemarin bercandanya aku berlebihan ya seharusnya ga keluar kata itu 😭, akuu cintaa kamu de sarahh kuuu, I love you so much",
